@@ -1,6 +1,7 @@
 async function getData() {
   const postNumber = document.getElementById('postNumber').value;
-  const results = await fetch("https://graph.instagram.com/me/media?fields=media_url,caption,timestamp,media_type&access_token=IGQWRQYm5yUDhNOEQwRERqSi1FNVNpTVYwVURxRjZAGTFpOVXBhTTJ1SkVId2pDMjV0WG83Q1Frd0dLcmpRd3RqMk5nUDluWTl1MlprNWR4MmpnU0ZAnaVJfQl9kTjJ0Y2NfZA0U3VmxMcEstaXdid3NLZAEpqcUZAzTG50NW9PQUxuRVlqZAwZDZD")
+  const accessToken = document.getElementById('accessToken').value
+  const results = await fetch(`https://graph.instagram.com/me/media?fields=media_url,caption,timestamp,media_type&access_token=${accessToken}`)
   const result = await results.json()
 
   document.getElementById("id").innerHTML += result.data[postNumber].id
