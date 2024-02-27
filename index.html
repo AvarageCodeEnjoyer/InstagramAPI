@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      /* flex-direction: column; */
+      /* align-items: center; */
+      box-sizing: content-box;
+      border: 2px solid black;
+    }
+
+    .container img {
+      width: 290px;
+      justify-self: center;
+      padding-bottom: 2px;
+    }
+  </style>
 </head>
 <body style="display: flex; justify-content: center;">
   <div style="width: 300px; height: 500px;">
@@ -18,17 +33,11 @@
       </div>
       <input type="submit" value="Get Post">
     </form>
-    <div><b>Caption: </b><span id="caption"></span></div>
-    <hr>
-    <div><b>Timestamp: </b><span id="timestamp"></span></div>
-    <hr>
-    <div><b>Post ID: </b><span id="id"></span></div>
-    <hr>
-    <div><b>Media Type: </b><span id="mediaType"></span></div>
-    <hr>
-    <div><b>Permalink: </b><span id="permalink"></span></div>
-    <hr>
-    <img style="width: 300px; height: 300px;" src="" id="image" />
+    <br>
+    <div id="container">
+      <br>
+      Add an access token to request posts, if "Post Number" is omitted will return all posts
+    </div>
   </div>
   <script src="./index.js"></script>
 </body>
